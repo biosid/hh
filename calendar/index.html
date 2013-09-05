@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="jquery.jscrollpane.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+    <!--Лень писать скролл самому =(-->
+    <script type="text/javascript" src="jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="jquery.jscrollpane.min.js"></script>
+
+    <script type="text/javascript" src="calendar.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+    <script type="text/javascript" src="datalayer.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="functional">
+                <a id="addButton" class="customButton" href="#">Добавить</a>
+                <a id="refreshButton" class="customButton" href="#">Обновить</a>
+                <div class="searchBox">
+                    <span id="searchImg">
+                        <input type="text" placeholder="Событие, дата или участник" id="search" /></span>
+                    <ul style="display: none" id="searchResults">
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="inner">
+            <div class="month_selector">
+                <div id="wraper">
+                    <a href="#" class="roundbtns prev" id="prevBtn"></a><span id="datelabel">Март 2013</span><a href="#" class="roundbtns next" id="nextBtn"></a>
+                    <a href="#" id="todaybtn" class="roundbtns">Сегодня</a>
+                </div>
+            </div>
+            <div id="editor" style="display: none" class="popupContaner">
+                <a href="#" id="closebtn" class="close">
+                    <img src="images/close.png" /></a>
+                <div class="fields">
+                    <input type="text" placeholder="Событие" id="EventName" />
+                    <input type="text" placeholder="День, месяц, год" id="EventDate" />
+                    <input type="text" placeholder="Имена участников" id="EventMembers" />
+                </div>
+                <div class="memo">
+                    <textarea placeholder="Описание" id="description"></textarea>
+                </div>
+                <div class="buttons">
+                    <input type="button" value="Готово" id="saveButton" />
+                    <input type="button" value="Удалить" id="deleteButton" />
+                </div>
+
+            </div>
+            <div class="calendar_table">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
